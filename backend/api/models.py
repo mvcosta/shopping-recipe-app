@@ -14,7 +14,7 @@ class Ingredient(models.Model):
 class Recipe(models.Model):
     name = models.CharField(max_length=200)
     description = models.CharField(max_length=400)
-    imagePath = models.CharField(max_length=200)
+    imagePath = models.CharField(max_length=1000)
     ingredients = models.ManyToManyField(Ingredient)
 
     def __str__(self) -> str:
